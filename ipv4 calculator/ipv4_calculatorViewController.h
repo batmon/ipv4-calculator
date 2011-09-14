@@ -12,6 +12,7 @@
     UITextField *ipField;
     UITextField *maskField;
     UILabel *wildcardLabel;
+    NSArray *arrySubnet;
 }
 @property (nonatomic, retain) IBOutlet UITextField *ipField;
 @property (nonatomic, retain) IBOutlet UITextField *maskField;
