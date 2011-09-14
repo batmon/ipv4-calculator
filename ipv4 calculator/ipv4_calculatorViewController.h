@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ipv4_calculatorViewController : UIViewController
+@interface ipv4_calculatorViewController : UIViewController {
+    UITextField *ipField;
+    UITextField *maskField;
+    UILabel *wildcardLabel;
+}
+@property (nonatomic, retain) IBOutlet UITextField *ipField;
+@property (nonatomic, retain) IBOutlet UITextField *maskField;
+@property (nonatomic, retain) IBOutlet UILabel *wildcardLabel;
+
+- (IBAction)wildcardChanged:(id)sender;
 
 @end

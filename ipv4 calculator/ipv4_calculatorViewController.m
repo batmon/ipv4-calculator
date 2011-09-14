@@ -9,6 +9,9 @@
 #import "ipv4_calculatorViewController.h"
 
 @implementation ipv4_calculatorViewController
+@synthesize maskField;
+@synthesize wildcardLabel;
+@synthesize ipField;
 
 - (void)didReceiveMemoryWarning
 {
@@ -30,6 +33,9 @@
 
 - (void)viewDidUnload
 {
+    [self setIpField:nil];
+    [self setMaskField:nil];
+    [self setWildcardLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -41,4 +47,17 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)dealloc {
+    [ipField release];
+    [maskField release];
+    [wildcardLabel release];
+    [super dealloc];
+}
+- (IBAction)wildcardChanged:(id)sender {
+    UISlider *slider = (UISlider *)sender;
+    int progressAsInt = (int)(slider.value + 0.5f);
+    NSString *newText = [[NSString alloc] initWithFormat:@"%d", progressAsInt];
+    wildcardLabel.text = newText;
+    [newText release];
+}
 @end
