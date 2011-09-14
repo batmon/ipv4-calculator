@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A1926DD1420697800DA5B72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1926DC1420697800DA5B72 /* UIKit.framework */; };
+		3A1926DF1420697800DA5B72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1926DE1420697800DA5B72 /* Foundation.framework */; };
+		3A1926E11420697800DA5B72 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1926E01420697800DA5B72 /* CoreGraphics.framework */; };
+		3A1926E71420697800DA5B72 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A1926E51420697800DA5B72 /* InfoPlist.strings */; };
+		3A1926E91420697800DA5B72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1926E81420697800DA5B72 /* main.m */; };
+		3A1926ED1420697800DA5B72 /* ipv4_calculatorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1926EC1420697800DA5B72 /* ipv4_calculatorAppDelegate.m */; };
+		3A1926F01420697800DA5B72 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1926EE1420697800DA5B72 /* MainWindow.xib */; };
+		3A1926F31420697800DA5B72 /* ipv4_calculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1926F21420697800DA5B72 /* ipv4_calculatorViewController.m */; };
+		3A1926F61420697800DA5B72 /* ipv4_calculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1926F41420697800DA5B72 /* ipv4_calculatorViewController.xib */; };
+		3A1926FE1420697800DA5B72 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1926FD1420697800DA5B72 /* SenTestingKit.framework */; };
+		3A1926FF1420697800DA5B72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1926DC1420697800DA5B72 /* UIKit.framework */; };
+		3A1927001420697800DA5B72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1926DE1420697800DA5B72 /* Foundation.framework */; };
+		3A1927011420697800DA5B72 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1926E01420697800DA5B72 /* CoreGraphics.framework */; };
+		3A1927091420697800DA5B72 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A1927071420697800DA5B72 /* InfoPlist.strings */; };
+		3A19270B1420697800DA5B72 /* ipv4_calculatorTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 3A19270A1420697800DA5B72 /* ipv4_calculatorTests.h */; };
+		3A19270D1420697800DA5B72 /* ipv4_calculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A19270C1420697800DA5B72 /* ipv4_calculatorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A1927021420697800DA5B72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A1926CF1420697800DA5B72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A1926D71420697800DA5B72;
+			remoteInfo = "ipv4 calculator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A1926D81420697800DA5B72 /* ipv4 calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ipv4 calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A1926DC1420697800DA5B72 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3A1926DE1420697800DA5B72 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3A1926E01420697800DA5B72 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3A1926E41420697800DA5B72 /* ipv4 calculator-Info.plist */ = {isa = PBXFileReference; path = "ipv4 calculator-Info.plist"; sourceTree = "<group>"; };
+		3A1926E61420697800DA5B72 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3A1926E81420697800DA5B72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3A1926EA1420697800DA5B72 /* ipv4 calculator-Prefix.pch */ = {isa = PBXFileReference; path = "ipv4 calculator-Prefix.pch"; sourceTree = "<group>"; };
+		3A1926EB1420697800DA5B72 /* ipv4_calculatorAppDelegate.h */ = {isa = PBXFileReference; path = ipv4_calculatorAppDelegate.h; sourceTree = "<group>"; };
+		3A1926EC1420697800DA5B72 /* ipv4_calculatorAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ipv4_calculatorAppDelegate.m; sourceTree = "<group>"; };
+		3A1926EF1420697800DA5B72 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		3A1926F11420697800DA5B72 /* ipv4_calculatorViewController.h */ = {isa = PBXFileReference; path = ipv4_calculatorViewController.h; sourceTree = "<group>"; };
+		3A1926F21420697800DA5B72 /* ipv4_calculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ipv4_calculatorViewController.m; sourceTree = "<group>"; };
+		3A1926F51420697800DA5B72 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ipv4_calculatorViewController.xib; sourceTree = "<group>"; };
+		3A1926FC1420697800DA5B72 /* ipv4 calculatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ipv4 calculatorTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A1926FD1420697800DA5B72 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3A1927061420697800DA5B72 /* ipv4 calculatorTests-Info.plist */ = {isa = PBXFileReference; path = "ipv4 calculatorTests-Info.plist"; sourceTree = "<group>"; };
+		3A1927081420697800DA5B72 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3A19270A1420697800DA5B72 /* ipv4_calculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ipv4_calculatorTests.h; sourceTree = "<group>"; };
+		3A19270C1420697800DA5B72 /* ipv4_calculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ipv4_calculatorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A1926D51420697800DA5B72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1926DD1420697800DA5B72 /* UIKit.framework in Frameworks */,
+				3A1926DF1420697800DA5B72 /* Foundation.framework in Frameworks */,
+				3A1926E11420697800DA5B72 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A1926F81420697800DA5B72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1926FE1420697800DA5B72 /* SenTestingKit.framework in Frameworks */,
+				3A1926FF1420697800DA5B72 /* UIKit.framework in Frameworks */,
+				3A1927001420697800DA5B72 /* Foundation.framework in Frameworks */,
+				3A1927011420697800DA5B72 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A1926CD1420697800DA5B72 = {
+			isa = PBXGroup;
+			children = (
+				3A1926E21420697800DA5B72 /* ipv4 calculator */,
+				3A1927041420697800DA5B72 /* ipv4 calculatorTests */,
+				3A1926DB1420697800DA5B72 /* Frameworks */,
+				3A1926D91420697800DA5B72 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A1926D91420697800DA5B72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A1926D81420697800DA5B72 /* ipv4 calculator.app */,
+				3A1926FC1420697800DA5B72 /* ipv4 calculatorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A1926DB1420697800DA5B72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A1926DC1420697800DA5B72 /* UIKit.framework */,
+				3A1926DE1420697800DA5B72 /* Foundation.framework */,
+				3A1926E01420697800DA5B72 /* CoreGraphics.framework */,
+				3A1926FD1420697800DA5B72 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A1926E21420697800DA5B72 /* ipv4 calculator */ = {
+			isa = PBXGroup;
+			children = (
+				3A1926EB1420697800DA5B72 /* ipv4_calculatorAppDelegate.h */,
+				3A1926EC1420697800DA5B72 /* ipv4_calculatorAppDelegate.m */,
+				3A1926EE1420697800DA5B72 /* MainWindow.xib */,
+				3A1926F11420697800DA5B72 /* ipv4_calculatorViewController.h */,
+				3A1926F21420697800DA5B72 /* ipv4_calculatorViewController.m */,
+				3A1926F41420697800DA5B72 /* ipv4_calculatorViewController.xib */,
+				3A1926E31420697800DA5B72 /* Supporting Files */,
+			);
+			path = "ipv4 calculator";
+			sourceTree = "<group>";
+		};
+		3A1926E31420697800DA5B72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A1926E41420697800DA5B72 /* ipv4 calculator-Info.plist */,
+				3A1926E51420697800DA5B72 /* InfoPlist.strings */,
+				3A1926E81420697800DA5B72 /* main.m */,
+				3A1926EA1420697800DA5B72 /* ipv4 calculator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A1927041420697800DA5B72 /* ipv4 calculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A19270A1420697800DA5B72 /* ipv4_calculatorTests.h */,
+				3A19270C1420697800DA5B72 /* ipv4_calculatorTests.m */,
+				3A1927051420697800DA5B72 /* Supporting Files */,
+			);
+			path = "ipv4 calculatorTests";
+			sourceTree = "<group>";
+		};
+		3A1927051420697800DA5B72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A1927061420697800DA5B72 /* ipv4 calculatorTests-Info.plist */,
+				3A1927071420697800DA5B72 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A1926D71420697800DA5B72 /* ipv4 calculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A1927101420697800DA5B72 /* Build configuration list for PBXNativeTarget "ipv4 calculator" */;
+			buildPhases = (
+				3A1926D41420697800DA5B72 /* Sources */,
+				3A1926D51420697800DA5B72 /* Frameworks */,
+				3A1926D61420697800DA5B72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ipv4 calculator";
+			productName = "ipv4 calculator";
+			productReference = 3A1926D81420697800DA5B72 /* ipv4 calculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A1926FB1420697800DA5B72 /* ipv4 calculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A1927131420697800DA5B72 /* Build configuration list for PBXNativeTarget "ipv4 calculatorTests" */;
+			buildPhases = (
+				3A1926F71420697800DA5B72 /* Sources */,
+				3A1926F81420697800DA5B72 /* Frameworks */,
+				3A1926F91420697800DA5B72 /* Resources */,
+				3A1926FA1420697800DA5B72 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A1927031420697800DA5B72 /* PBXTargetDependency */,
+			);
+			name = "ipv4 calculatorTests";
+			productName = "ipv4 calculatorTests";
+			productReference = 3A1926FC1420697800DA5B72 /* ipv4 calculatorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A1926CF1420697800DA5B72 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 3A1926D21420697800DA5B72 /* Build configuration list for PBXProject "ipv4 calculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3A1926CD1420697800DA5B72;
+			productRefGroup = 3A1926D91420697800DA5B72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A1926D71420697800DA5B72 /* ipv4 calculator */,
+				3A1926FB1420697800DA5B72 /* ipv4 calculatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A1926D61420697800DA5B72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1926E71420697800DA5B72 /* InfoPlist.strings in Resources */,
+				3A1926F01420697800DA5B72 /* MainWindow.xib in Resources */,
+				3A1926F61420697800DA5B72 /* ipv4_calculatorViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A1926F91420697800DA5B72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1927091420697800DA5B72 /* InfoPlist.strings in Resources */,
+				3A19270B1420697800DA5B72 /* ipv4_calculatorTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A1926FA1420697800DA5B72 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A1926D41420697800DA5B72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1926E91420697800DA5B72 /* main.m in Sources */,
+				3A1926ED1420697800DA5B72 /* ipv4_calculatorAppDelegate.m in Sources */,
+				3A1926F31420697800DA5B72 /* ipv4_calculatorViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A1926F71420697800DA5B72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A19270D1420697800DA5B72 /* ipv4_calculatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A1927031420697800DA5B72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A1926D71420697800DA5B72 /* ipv4 calculator */;
+			targetProxy = 3A1927021420697800DA5B72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3A1926E51420697800DA5B72 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A1926E61420697800DA5B72 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3A1926EE1420697800DA5B72 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A1926EF1420697800DA5B72 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		3A1926F41420697800DA5B72 /* ipv4_calculatorViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A1926F51420697800DA5B72 /* en */,
+			);
+			name = ipv4_calculatorViewController.xib;
+			sourceTree = "<group>";
+		};
+		3A1927071420697800DA5B72 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A1927081420697800DA5B72 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A19270E1420697800DA5B72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3A19270F1420697800DA5B72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A1927111420697800DA5B72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ipv4 calculator/ipv4 calculator-Prefix.pch";
+				INFOPLIST_FILE = "ipv4 calculator/ipv4 calculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3A1927121420697800DA5B72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ipv4 calculator/ipv4 calculator-Prefix.pch";
+				INFOPLIST_FILE = "ipv4 calculator/ipv4 calculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3A1927141420697800DA5B72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ipv4 calculator.app/ipv4 calculator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ipv4 calculator/ipv4 calculator-Prefix.pch";
+				INFOPLIST_FILE = "ipv4 calculatorTests/ipv4 calculatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3A1927151420697800DA5B72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ipv4 calculator.app/ipv4 calculator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ipv4 calculator/ipv4 calculator-Prefix.pch";
+				INFOPLIST_FILE = "ipv4 calculatorTests/ipv4 calculatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A1926D21420697800DA5B72 /* Build configuration list for PBXProject "ipv4 calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A19270E1420697800DA5B72 /* Debug */,
+				3A19270F1420697800DA5B72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A1927101420697800DA5B72 /* Build configuration list for PBXNativeTarget "ipv4 calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A1927111420697800DA5B72 /* Debug */,
+				3A1927121420697800DA5B72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3A1927131420697800DA5B72 /* Build configuration list for PBXNativeTarget "ipv4 calculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A1927141420697800DA5B72 /* Debug */,
+				3A1927151420697800DA5B72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A1926CF1420697800DA5B72 /* Project object */;
+}
