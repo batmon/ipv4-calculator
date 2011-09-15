@@ -18,6 +18,7 @@
 @property (nonatomic, retain) IBOutlet UITextField *maskField;
 @property (nonatomic, retain) IBOutlet UILabel *wildcardLabel;
 
+- (IBAction)backgroundTap:(id)sender;
 - (IBAction)wildcardChanged:(id)sender;
 
 @end
