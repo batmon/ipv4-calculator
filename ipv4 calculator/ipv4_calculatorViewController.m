@@ -29,6 +29,7 @@
     [super viewDidLoad];
     arrySubnet =[[NSArray alloc] initWithObjects:@"255.0.0.0",@"255.128.0.0",@"255.192.0.0",@"255.224.0.0",@"255.240.0.0",@"255.248.0.0",@"255.252.0.0",@"255.254.0.0",@"255.255.0.0",@"255.255.128.0",@"255.255.192.0",@"255.255.224.0",@"255.255.240.0",@"255.255.248.0",@"255.255.252.0",@"255.255.254.0",@"255.255.255.0",@"255.255.255.128",@"255.255.255.192",@"255.255.255.224",@"255.255.255.240",@"255.255.255.248",@"255.255.255.252",@"255.255.255.254",@"255.255.255.255",nil];
     ipField.keyboardType = UIKeyboardTypeDecimalPad;
+    maskField.keyboardType = UIKeyboardTypeDecimalPad;
 }
 
 - (void)viewDidUnload
@@ -55,7 +56,16 @@
 }
 
 - (IBAction)backgroundTap:(id)sender {
+    int i;
     [ipField resignFirstResponder];
+    [maskField resignFirstResponder];
+    for (i = 0; i < 25; i++) {
+        //NSString *subnetString = [arrySubnet objectAtIndex:i];
+        if ([[arrySubnet objectAtIndex:i] isEqualToString:maskField.text]) {
+            NSString *newText = [[NSString alloc] initWithFormat:@"%d", i + 8];
+            wildcardLabel.text = newText;
+        }
+    }
 }
 
 - (IBAction)wildcardChanged:(id)sender {
