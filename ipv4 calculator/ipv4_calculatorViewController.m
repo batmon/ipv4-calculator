@@ -11,6 +11,8 @@
 @implementation ipv4_calculatorViewController
 @synthesize maskField;
 @synthesize wildcardLabel;
+@synthesize networkField;
+@synthesize hostField;
 @synthesize ipField;
 
 - (void)didReceiveMemoryWarning
@@ -27,7 +29,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    arrySubnet =[[NSArray alloc] initWithObjects:@"255.0.0.0",@"255.128.0.0",@"255.192.0.0",@"255.224.0.0",@"255.240.0.0",@"255.248.0.0",@"255.252.0.0",@"255.254.0.0",@"255.255.0.0",@"255.255.128.0",@"255.255.192.0",@"255.255.224.0",@"255.255.240.0",@"255.255.248.0",@"255.255.252.0",@"255.255.254.0",@"255.255.255.0",@"255.255.255.128",@"255.255.255.192",@"255.255.255.224",@"255.255.255.240",@"255.255.255.248",@"255.255.255.252",@"255.255.255.254",@"255.255.255.255",nil];
+    arrySubnet = [[NSArray alloc] initWithObjects:@"0.0.0.0",@"128.0.0.0",@"192.0.0.0",@"224.0.0.0",@"240.0.0.0",@"248.0.0.0",@"252.0.0.0",@"254.0.0.0",@"255.0.0.0",@"255.128.0.0",@"255.192.0.0",@"255.224.0.0",@"255.240.0.0",@"255.248.0.0",@"255.252.0.0",@"255.254.0.0",@"255.255.0.0",@"255.255.128.0",@"255.255.192.0",@"255.255.224.0",@"255.255.240.0",@"255.255.248.0",@"255.255.252.0",@"255.255.254.0",@"255.255.255.0",@"255.255.255.128",@"255.255.255.192",@"255.255.255.224",@"255.255.255.240",@"255.255.255.248",@"255.255.255.252",@"255.255.255.254",@"255.255.255.255",nil];
+    arryNetwork = [[NSArray alloc] initWithObjects:@"1",@"2",@"4",@"8",@"16",@"32",@"64",@"128",@"256",@"512",@"1024",@"2048",@"4096",@"8192",@"16384",@"32768",@"65536",@"131072",@"262144",@"524288",@"1048576",@"2097152",@"4194304",@"8388608",@"16777216",@"33554432",@"67108864",@"134217728",@"268435456",@"536870912",@"1073741824",@"2147483648",@"4294967296", nil]; 
+    arryHost = [[NSArray alloc] initWithObjects:@"4294967296",@"2147483648",@"1073741824",@"536870912",@"268435456",@"134217728",@"67108864",@"33554432",@"16777216",@"8388608",@"4194304",@"2097152",@"1048576",@"524288",@"262144",@"131072",@"65536",@"32768",@"16384",@"8192",@"4096",@"2048",@"1024",@"512",@"256",@"128",@"64",@"32",@"16",@"8",@"4",@"2",@"1", nil];
     ipField.keyboardType = UIKeyboardTypeDecimalPad;
     maskField.keyboardType = UIKeyboardTypeDecimalPad;
 }
@@ -37,6 +41,8 @@
     [self setIpField:nil];
     [self setMaskField:nil];
     [self setWildcardLabel:nil];
+    [self setNetworkField:nil];
+    [self setHostField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -52,6 +58,8 @@
     [ipField release];
     [maskField release];
     [wildcardLabel release];
+    [networkField release];
+    [hostField release];
     [super dealloc];
 }
 
@@ -62,7 +70,7 @@
     for (i = 0; i < 25; i++) {
         //NSString *subnetString = [arrySubnet objectAtIndex:i];
         if ([[arrySubnet objectAtIndex:i] isEqualToString:maskField.text]) {
-            NSString *newText = [[NSString alloc] initWithFormat:@"%d", i + 8];
+            NSString *newText = [[NSString alloc] initWithFormat:@"%d", i];
             wildcardLabel.text = newText;
         }
     }
@@ -73,7 +81,9 @@
     int progressAsInt = (int)(slider.value + 0.5f);
     NSString *newText = [[NSString alloc] initWithFormat:@"%d", progressAsInt];
     wildcardLabel.text = newText;
-    maskField.text = [arrySubnet objectAtIndex:(progressAsInt - 8)];
+    maskField.text = [arrySubnet objectAtIndex:progressAsInt];
+    networkField.text = [arryNetwork objectAtIndex:progressAsInt];
+    hostField.text = [arryHost objectAtIndex:progressAsInt];
     [newText release];
 }
 @end

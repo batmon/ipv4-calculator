@@ -12,11 +12,17 @@
     UITextField *ipField;
     UITextField *maskField;
     UILabel *wildcardLabel;
+    UITextField *networkField;
+    UITextField *hostField;
     NSArray *arrySubnet;
+    NSArray *arryNetwork;
+    NSArray *arryHost;
 }
 @property (nonatomic, retain) IBOutlet UITextField *ipField;
 @property (nonatomic, retain) IBOutlet UITextField *maskField;
 @property (nonatomic, retain) IBOutlet UILabel *wildcardLabel;
+@property (nonatomic, retain) IBOutlet UITextField *networkField;
+@property (nonatomic, retain) IBOutlet UITextField *hostField;
 
 - (IBAction)backgroundTap:(id)sender;
 - (IBAction)wildcardChanged:(id)sender;
