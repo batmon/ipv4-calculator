@@ -77,6 +77,11 @@
 }
 
 - (IBAction)wildcardChanged:(id)sender {
+    NSArray *arryIP = [ipField.text componentsSeparatedByString: @"."];
+    int ip0 = [[arryIP objectAtIndex:0] intValue];
+    int ip1 = [[arryIP objectAtIndex:1] intValue];
+    int ip2 = [[arryIP objectAtIndex:2] intValue];
+    int ip3 = [[arryIP objectAtIndex:3] intValue];
     UISlider *slider = (UISlider *)sender;
     int progressAsInt = (int)(slider.value + 0.5f);
     NSString *newText = [[NSString alloc] initWithFormat:@"%d", progressAsInt];
