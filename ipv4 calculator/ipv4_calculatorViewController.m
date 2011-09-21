@@ -105,8 +105,16 @@
     NSString *newText = [[NSString alloc] initWithFormat:@"%d", progressAsInt];
     wildcardLabel.text = newText;
     maskField.text = [arrySubnet objectAtIndex:progressAsInt];
-    networkField.text = [arryNetwork objectAtIndex:progressAsInt];
     hostField.text = [arryHost objectAtIndex:progressAsInt];
+    if (progressAsInt < 8) {
+        networkField.text = [arryNetwork objectAtIndex:progressAsInt];
+    } else if (progressAsInt < 16) {
+        networkField.text = [arryNetwork objectAtIndex:progressAsInt - 8];
+    } else if (progressAsInt < 24) {
+        networkField.text = [arryNetwork objectAtIndex:progressAsInt - 16];
+    } else {
+        networkField.text = [arryNetwork objectAtIndex:progressAsInt - 24];
+    }
     [newText release];
 }
 @end
