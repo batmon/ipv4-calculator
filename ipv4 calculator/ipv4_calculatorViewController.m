@@ -64,24 +64,42 @@
 }
 
 - (IBAction)backgroundTap:(id)sender {
-    int i;
     [ipField resignFirstResponder];
-    [maskField resignFirstResponder];
-    for (i = 0; i < 25; i++) {
-        //NSString *subnetString = [arrySubnet objectAtIndex:i];
-        if ([[arrySubnet objectAtIndex:i] isEqualToString:maskField.text]) {
-            NSString *newText = [[NSString alloc] initWithFormat:@"%d", i];
-            wildcardLabel.text = newText;
+    NSArray *arryIP = [ipField.text componentsSeparatedByString: @"."];
+    if ([arryIP count] != 4) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"IP addree has to be in num.num.num.num format\n (num = between 0 to 255)" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+		[alert show];
+		[alert release];
+    } else {
+        int ip0 = [[arryIP objectAtIndex:0] intValue];
+        int ip1 = [[arryIP objectAtIndex:1] intValue];
+        int ip2 = [[arryIP objectAtIndex:2] intValue];
+        int ip3 = [[arryIP objectAtIndex:3] intValue];
+        if (ip0 < 0 || ip0 > 255 || ip1 < 0 || ip1 > 255 || ip2 < 0 || ip2 > 255 || ip3 < 0 || ip3 > 255) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"IP addree has to be in num.num.num.num format\n (num = between 0 to 255)" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
+            [alert release];
         }
-    }
+    }    
 }
 
 - (IBAction)wildcardChanged:(id)sender {
     NSArray *arryIP = [ipField.text componentsSeparatedByString: @"."];
-    int ip0 = [[arryIP objectAtIndex:0] intValue];
-    int ip1 = [[arryIP objectAtIndex:1] intValue];
-    int ip2 = [[arryIP objectAtIndex:2] intValue];
-    int ip3 = [[arryIP objectAtIndex:3] intValue];
+    if ([arryIP count] != 4) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"IP addree has to be in num.num.num.num format\n (num = between 0 to 255)" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+		[alert show];
+		[alert release];
+    } else {
+        int ip0 = [[arryIP objectAtIndex:0] intValue];
+        int ip1 = [[arryIP objectAtIndex:1] intValue];
+        int ip2 = [[arryIP objectAtIndex:2] intValue];
+        int ip3 = [[arryIP objectAtIndex:3] intValue];
+        if (ip0 < 0 || ip0 > 255 || ip1 < 0 || ip1 > 255 || ip2 < 0 || ip2 > 255 || ip3 < 0 || ip3 > 255) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"IP addree has to be in num.num.num.num format\n (num = between 0 to 255)" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
+            [alert release];
+        }
+    }
     UISlider *slider = (UISlider *)sender;
     int progressAsInt = (int)(slider.value + 0.5f);
     NSString *newText = [[NSString alloc] initWithFormat:@"%d", progressAsInt];

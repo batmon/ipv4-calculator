@@ -17,7 +17,6 @@
     NSArray *arrySubnet;
     NSArray *arryNetwork;
     NSArray *arryHost;
-    NSArray *arryIP;
 }
 @property (nonatomic, retain) IBOutlet UITextField *ipField;
 @property (nonatomic, retain) IBOutlet UITextField *maskField;
