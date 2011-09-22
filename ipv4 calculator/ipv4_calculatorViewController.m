@@ -13,6 +13,7 @@
 @synthesize wildcardLabel;
 @synthesize networkField;
 @synthesize hostField;
+@synthesize iprangeField;
 @synthesize ipField;
 
 - (void)didReceiveMemoryWarning
@@ -43,6 +44,7 @@
     [self setWildcardLabel:nil];
     [self setNetworkField:nil];
     [self setHostField:nil];
+    [self setIprangeField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -60,6 +62,7 @@
     [wildcardLabel release];
     [networkField release];
     [hostField release];
+    [iprangeField release];
     [super dealloc];
 }
 
@@ -85,15 +88,15 @@
 
 - (IBAction)wildcardChanged:(id)sender {
     NSArray *arryIP = [ipField.text componentsSeparatedByString: @"."];
+    int ip0 = [[arryIP objectAtIndex:0] intValue];
+    int ip1 = [[arryIP objectAtIndex:1] intValue];
+    int ip2 = [[arryIP objectAtIndex:2] intValue];
+    int ip3 = [[arryIP objectAtIndex:3] intValue];
     if ([arryIP count] != 4) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"IP addree has to be in num.num.num.num format\n (num = between 0 to 255)" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
 		[alert show];
 		[alert release];
     } else {
-        int ip0 = [[arryIP objectAtIndex:0] intValue];
-        int ip1 = [[arryIP objectAtIndex:1] intValue];
-        int ip2 = [[arryIP objectAtIndex:2] intValue];
-        int ip3 = [[arryIP objectAtIndex:3] intValue];
         if (ip0 < 0 || ip0 > 255 || ip1 < 0 || ip1 > 255 || ip2 < 0 || ip2 > 255 || ip3 < 0 || ip3 > 255) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"IP addree has to be in num.num.num.num format\n (num = between 0 to 255)" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
             [alert show];
@@ -106,8 +109,22 @@
     wildcardLabel.text = newText;
     maskField.text = [arrySubnet objectAtIndex:progressAsInt];
     hostField.text = [arryHost objectAtIndex:progressAsInt];
+    int i, ipstart0 = 0, ipend0;
     if (progressAsInt < 8) {
         networkField.text = [arryNetwork objectAtIndex:progressAsInt];
+        int subnets = [[arryNetwork objectAtIndex:progressAsInt] intValue];
+        for (i = 0; i < subnets; i++) {
+            if (ip0 < (256 / subnets)) {
+                if (i == 0) {
+                    ipstart0 = 0;
+                    ipend0 = 255;
+                } else {
+                    ipstart0 = [[arryNetwork objectAtIndex:progressAsInt] intValue];
+                    ipend0 = ipstart0 + (256 / [[arryNetwork objectAtIndex:progressAsInt] intValue]);
+                }
+            }
+        }            
+        iprangeField.text = [NSString stringWithFormat:@"%d.0.0.0 ~ %d.255.255.255", ipstart0, ipend0];
     } else if (progressAsInt < 16) {
         networkField.text = [arryNetwork objectAtIndex:progressAsInt - 8];
     } else if (progressAsInt < 24) {
