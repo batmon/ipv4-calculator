@@ -68,22 +68,7 @@
 
 - (IBAction)backgroundTap:(id)sender {
     [ipField resignFirstResponder];
-    NSArray *arryIP = [ipField.text componentsSeparatedByString: @"."];
-    if ([arryIP count] != 4) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"IP addree has to be in num.num.num.num format\n (num = between 0 to 255)" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-		[alert show];
-		[alert release];
-    } else {
-        int ip0 = [[arryIP objectAtIndex:0] intValue];
-        int ip1 = [[arryIP objectAtIndex:1] intValue];
-        int ip2 = [[arryIP objectAtIndex:2] intValue];
-        int ip3 = [[arryIP objectAtIndex:3] intValue];
-        if (ip0 < 0 || ip0 > 255 || ip1 < 0 || ip1 > 255 || ip2 < 0 || ip2 > 255 || ip3 < 0 || ip3 > 255) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"IP addree has to be in num.num.num.num format\n (num = between 0 to 255)" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-            [alert show];
-            [alert release];
-        }
-    }    
+    [self wildcardChanged:nil];
 }
 
 - (IBAction)wildcardChanged:(id)sender {
@@ -109,28 +94,55 @@
     wildcardLabel.text = newText;
     maskField.text = [arrySubnet objectAtIndex:progressAsInt];
     hostField.text = [arryHost objectAtIndex:progressAsInt];
-    int i, ipstart0 = 0, ipend0;
+    int i, ipStart, ipEnd;
     if (progressAsInt < 8) {
         networkField.text = [arryNetwork objectAtIndex:progressAsInt];
-        int subnets = [[arryNetwork objectAtIndex:progressAsInt] intValue];
-        for (i = 0; i < subnets; i++) {
-            if (ip0 < (256 / subnets)) {
-                if (i == 0) {
-                    ipstart0 = 0;
-                    ipend0 = 255;
-                } else {
-                    ipstart0 = [[arryNetwork objectAtIndex:progressAsInt] intValue];
-                    ipend0 = ipstart0 + (256 / [[arryNetwork objectAtIndex:progressAsInt] intValue]);
+        int subnets = [networkField.text intValue];
+        for (i = 0; i < 256; i = i + (256 / subnets)) {
+            if (ip0 >= i) {
+                ipStart = i;
+                ipEnd = ipStart + (256 / subnets) - 1;
+            }
+        }            
+        iprangeField.text = [NSString stringWithFormat:@"%d.0.0.1 ~ %d.255.255.255", ipStart, ipEnd];
+    } else if (progressAsInt < 16) {
+        networkField.text = [arryNetwork objectAtIndex:progressAsInt - 8];
+        int subnets = [networkField.text intValue];
+        for (i = 0; i < 256; i = i + (256 / subnets)) {
+            if (ip1 >= i) {
+                ipStart = i;
+                ipEnd = ipStart + (256 / subnets) - 1;
+            }
+        }            
+        iprangeField.text = [NSString stringWithFormat:@"%d.%d.0.1 ~ %d.%d.255.255", ip0, ipStart, ip0, ipEnd];
+    } else if (progressAsInt < 24) {
+        networkField.text = [arryNetwork objectAtIndex:progressAsInt - 16];
+        int subnets = [networkField.text intValue];
+        for (i = 0; i < 256; i = i + (256 / subnets)) {
+            if (ip2 >= i) {
+                ipStart = i;
+                ipEnd = ipStart + (256 / subnets) - 1;
+            }
+        }            
+        iprangeField.text = [NSString stringWithFormat:@"%d.%d.%d.1 ~ %d.%d.%d.255", ip0, ip1, ipStart, ip0, ip1, ipEnd];
+    } else {
+        networkField.text = [arryNetwork objectAtIndex:progressAsInt - 24];
+        hostField.text = [NSString stringWithFormat:@"%d", [hostField.text intValue] - 1];
+        int subnets = [networkField.text intValue];
+        for (i = 0; i < 256; i = i + (256 / subnets)) {
+            if (ip3 >= i) {
+                ipStart = i;
+                ipEnd = ipStart + (256 / subnets) - 1;
+                if (ipStart == 0) {
+                    if (progressAsInt < 31) {
+                        ipStart = 1;
+                    } else {
+                        hostField.text = [NSString stringWithFormat:@"%d", [hostField.text intValue] + 1];
+                    }
                 }
             }
         }            
-        iprangeField.text = [NSString stringWithFormat:@"%d.0.0.0 ~ %d.255.255.255", ipstart0, ipend0];
-    } else if (progressAsInt < 16) {
-        networkField.text = [arryNetwork objectAtIndex:progressAsInt - 8];
-    } else if (progressAsInt < 24) {
-        networkField.text = [arryNetwork objectAtIndex:progressAsInt - 16];
-    } else {
-        networkField.text = [arryNetwork objectAtIndex:progressAsInt - 24];
+        iprangeField.text = [NSString stringWithFormat:@"%d.%d.%d.%d ~ %d.%d.%d.%d", ip0, ip1, ip2, ipStart, ip0, ip1, ip2, ipEnd];
     }
     [newText release];
 }
