@@ -28,5 +28,6 @@
 
 - (IBAction)backgroundTap:(id)sender;
 - (IBAction)wildcardChanged:(id)sender;
+- (IBAction)infoPressed:(id)sender;
 
 @end

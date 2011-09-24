@@ -23,6 +23,8 @@
 		3A1927091420697800DA5B72 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A1927071420697800DA5B72 /* InfoPlist.strings */; };
 		3A19270B1420697800DA5B72 /* ipv4_calculatorTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 3A19270A1420697800DA5B72 /* ipv4_calculatorTests.h */; };
 		3A19270D1420697800DA5B72 /* ipv4_calculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A19270C1420697800DA5B72 /* ipv4_calculatorTests.m */; };
+		E9DF9E55142D49E8006F8FA8 /* ipv4InfoPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DF9E53142D49E8006F8FA8 /* ipv4InfoPageView.m */; };
+		E9DF9E56142D49E8006F8FA8 /* ipv4InfoPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9DF9E54142D49E8006F8FA8 /* ipv4InfoPageView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		3A1927081420697800DA5B72 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A19270A1420697800DA5B72 /* ipv4_calculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ipv4_calculatorTests.h; sourceTree = "<group>"; };
 		3A19270C1420697800DA5B72 /* ipv4_calculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ipv4_calculatorTests.m; sourceTree = "<group>"; };
+		E9DF9E52142D49E8006F8FA8 /* ipv4InfoPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ipv4InfoPageView.h; sourceTree = "<group>"; };
+		E9DF9E53142D49E8006F8FA8 /* ipv4InfoPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ipv4InfoPageView.m; sourceTree = "<group>"; };
+		E9DF9E54142D49E8006F8FA8 /* ipv4InfoPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ipv4InfoPageView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +128,9 @@
 				3A1926F21420697800DA5B72 /* ipv4_calculatorViewController.m */,
 				3A1926F41420697800DA5B72 /* ipv4_calculatorViewController.xib */,
 				3A1926E31420697800DA5B72 /* Supporting Files */,
+				E9DF9E52142D49E8006F8FA8 /* ipv4InfoPageView.h */,
+				E9DF9E53142D49E8006F8FA8 /* ipv4InfoPageView.m */,
+				E9DF9E54142D49E8006F8FA8 /* ipv4InfoPageView.xib */,
 			);
 			path = "ipv4 calculator";
 			sourceTree = "<group>";
@@ -227,6 +235,7 @@
 				3A1926E71420697800DA5B72 /* InfoPlist.strings in Resources */,
 				3A1926F01420697800DA5B72 /* MainWindow.xib in Resources */,
 				3A1926F61420697800DA5B72 /* ipv4_calculatorViewController.xib in Resources */,
+				E9DF9E56142D49E8006F8FA8 /* ipv4InfoPageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +274,7 @@
 				3A1926E91420697800DA5B72 /* main.m in Sources */,
 				3A1926ED1420697800DA5B72 /* ipv4_calculatorAppDelegate.m in Sources */,
 				3A1926F31420697800DA5B72 /* ipv4_calculatorViewController.m in Sources */,
+				E9DF9E55142D49E8006F8FA8 /* ipv4InfoPageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +450,7 @@
 				3A1927121420697800DA5B72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A1927131420697800DA5B72 /* Build configuration list for PBXNativeTarget "ipv4 calculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +459,7 @@
 				3A1927151420697800DA5B72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

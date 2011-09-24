@@ -7,6 +7,7 @@
 //
 
 #import "ipv4_calculatorViewController.h"
+#import "ipv4InfoPageView.h"
 
 @implementation ipv4_calculatorViewController
 @synthesize maskField;
@@ -153,5 +154,11 @@
         }
     }
     [newText release];
+}
+
+- (IBAction)infoPressed:(id)sender {
+    ipv4InfoPageView *infoPageView = [[ipv4InfoPageView alloc] initWithNibName:nil bundle:nil];
+    infoPageView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:infoPageView animated:YES];
 }
 @end
