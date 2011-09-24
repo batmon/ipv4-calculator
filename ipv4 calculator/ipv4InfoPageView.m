@@ -49,6 +49,6 @@
 }
 
 - (IBAction)backButtonPressed:(id)sender {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissModalViewControllerAnimated:YES];
 }
 @end
