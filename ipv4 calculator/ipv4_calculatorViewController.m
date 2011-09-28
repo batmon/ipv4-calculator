@@ -15,6 +15,7 @@
 @synthesize networkField;
 @synthesize hostField;
 @synthesize iprangeField;
+@synthesize banner, bannerIsVisible;
 @synthesize ipField;
 
 - (void)didReceiveMemoryWarning
@@ -26,6 +27,24 @@
 }
 
 #pragma mark - View lifecycle
+
+- (void)bannerViewDidLoad:(ADBannerView *)aBanner {
+    if (!self.bannerIsVisible) {
+        [UIView beginAnimations:@"animatedAdBannerOn" context:NULL];
+        banner.frame = CGRectOffset(banner.frame, 0.0, 50.0);
+        [UIView commitAnimations];
+        self.bannerIsVisible = YES;
+    }
+}
+
+- (void)bannerView:(ADBannerView *)aBanner didFailToReceiveAdWithError:(NSError *)error {
+    if (!self.bannerIsVisible) {
+        [UIView beginAnimations:@"animatedAdBannerOff" context:NULL];
+        banner.frame = CGRectOffset(banner.frame, 0.0, -320.0);
+        [UIView commitAnimations];
+        self.bannerIsVisible = NO;
+    }    
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
@@ -47,6 +66,7 @@
     [self setNetworkField:nil];
     [self setHostField:nil];
     [self setIprangeField:nil];
+    [self setBanner:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -65,6 +85,7 @@
     [networkField release];
     [hostField release];
     [iprangeField release];
+    [banner release];
     [super dealloc];
 }
 

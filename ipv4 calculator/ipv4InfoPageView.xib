@@ -51,6 +51,8 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{0, 44}, {320, 372}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="383814544"/>
 						<string key="NSReuseIdentifierKey">_NS:613</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -60,17 +62,37 @@
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIEditable">NO</bool>
-						<string key="IBUIText">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+						<object class="NSMutableString" key="IBUIText">
+							<bytes key="NS.bytes">SVB2NCBTdWJuZXQgQ2FsY3VsYXRpb24KCmh0dHA6Ly93d3cudmtpY2suY29tLwoKVGhpcyBhcHBsaWNh
+dGlvbiBoZWxwcyB5b3UgcXVpY2tseSBkZXRlcm1pbmUgd2hhdCBzdWJuZXQgbWFzayB5b3Ugc2hvdWxk
+IHVzZSBiYXNlZCBvbiBob3cgbWFueSBob3N0cyB5b3Ugd291bGQgbGlrZSB0byBoYXZlLCBvciBob3cg
+bWFueSBzdWJuZXR3b3JrcyB5b3Ugd291bGQgbGlrZSB0byBoYXZlIGluIHlvdXIgbmV0d29yay4gIElQ
+djQgQ2FsY3VsYXRvciBpcyB2ZXJ5IGVhc3kgdG8gdXNlOyBtb3ZlIHRoZSBDSURSIHNsaWRlciB0byBn
+YXRoZXIgYWxsIHRoZSBpbmZvcm1hdGlvbiB5b3UgbmVlZCB0byBtYWtlIGEgcGVyZmVjdCBzdWJuZXR0
+ZWQgbmV0d29yayBlbnZpcm9ubWVudCBmb3IgeW91ciBob21lIG9yIHlvdXIgb2ZmaWNlLgoKQ29tbWVu
+dHMgYW5kIGZlZWRiYWNrcyBhcmUgd2VsY29tZS4gIFlvdSBjYW4gYWxzbyB2aXNpdCBodHRwOi8vd3d3
+LnZraWNrLmNvbSB0byBsZXQgbWUga25vdyB5b3VyIHF1ZXN0aW9ucyBhbmQgZmVlZGJhY2tzLiAgSSB3
+aWxsIGRvIG15IGJlc3QgdG8gYWRkIG1vcmUgZmVhdHVyZXMgYmFzZSBvbiB5b3VyIHJlcXVlc3QuCgpN
+b3JlIGRldGFpbCBpbmZvcm1hdGlvbiBhYm91dCBzdWJuZXR3b3JraW5nIGlzIGF2YWlsYWJsZSBhdCB3
+aWtpIHNpdGU6IAoKaHR0cDovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9TdWJuZXR3b3JrA</bytes>
+						</object>
+						<object class="NSFont" key="IBUIFont">
+							<string key="NSName">Helvetica</string>
+							<double key="NSSize">17</double>
+							<int key="NSfFlags">16</int>
+						</object>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<int key="IBUIAutocapitalizationType">2</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
+						<int key="IBUIDataDetectorTypes">2</int>
 					</object>
 					<object class="IBUIToolbar" id="383814544">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">266</int>
 						<string key="NSFrame">{{0, 416}, {320, 44}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:345</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -91,7 +113,8 @@
 						<int key="NSvFlags">290</int>
 						<string key="NSFrameSize">{320, 44}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSNextKeyView" ref="383814544"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="660500795"/>
 						<string key="NSReuseIdentifierKey">_NS:240</string>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSArray" key="IBUIItems">
@@ -106,6 +129,7 @@
 				</object>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="256531791"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -247,7 +271,30 @@
 			<nil key="sourceID"/>
 			<int key="maxID">9</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">ipv4InfoPageView</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">backButtonPressed:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">backButtonPressed:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">backButtonPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/ipv4InfoPageView.h</string>
+					</object>
+				</object>
+			</object>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">

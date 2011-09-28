@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAD/iAD.h>
 
 @interface ipv4_calculatorViewController : UIViewController {
     UITextField *ipField;
@@ -15,6 +16,7 @@
     UITextField *networkField;
     UITextField *hostField;
     UITextView *iprangeField;
+    ADBannerView *banner;
     NSArray *arrySubnet;
     NSArray *arryNetwork;
     NSArray *arryHost;
@@ -25,6 +27,8 @@
 @property (nonatomic, retain) IBOutlet UITextField *networkField;
 @property (nonatomic, retain) IBOutlet UITextField *hostField;
 @property (nonatomic, retain) IBOutlet UITextView *iprangeField;
+@property (nonatomic, retain) IBOutlet ADBannerView *banner;
+@property (nonatomic, assign) BOOL bannerIsVisible;
 
 - (IBAction)backgroundTap:(id)sender;
 - (IBAction)wildcardChanged:(id)sender;

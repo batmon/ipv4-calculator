@@ -94,7 +94,6 @@
 		3A1926CD1420697800DA5B72 = {
 			isa = PBXGroup;
 			children = (
-				E9BA905D142D582D00050537 /* iAd.framework */,
 				3A1926E21420697800DA5B72 /* ipv4 calculator */,
 				3A1927041420697800DA5B72 /* ipv4 calculatorTests */,
 				3A1926DB1420697800DA5B72 /* Frameworks */,
@@ -114,6 +113,7 @@
 		3A1926DB1420697800DA5B72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9BA905D142D582D00050537 /* iAd.framework */,
 				3A1926DC1420697800DA5B72 /* UIKit.framework */,
 				3A1926DE1420697800DA5B72 /* Foundation.framework */,
 				3A1926E01420697800DA5B72 /* CoreGraphics.framework */,
