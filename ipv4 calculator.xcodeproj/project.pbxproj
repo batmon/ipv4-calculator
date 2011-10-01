@@ -443,6 +443,54 @@
 			};
 			name = Release;
 		};
+		E95766D3143646B7009F8581 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mon Yang";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "105C0184-BB67-4ACE-99AA-48D2CB037A0D";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		E95766D4143646B7009F8581 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ipv4 calculator/ipv4 calculator-Prefix.pch";
+				INFOPLIST_FILE = "ipv4 calculator/ipv4 calculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
+		};
+		E95766D5143646B7009F8581 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ipv4 calculator.app/ipv4 calculator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ipv4 calculator/ipv4 calculator-Prefix.pch";
+				INFOPLIST_FILE = "ipv4 calculatorTests/ipv4 calculatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Distribution;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -451,27 +499,30 @@
 			buildConfigurations = (
 				3A19270E1420697800DA5B72 /* Debug */,
 				3A19270F1420697800DA5B72 /* Release */,
+				E95766D3143646B7009F8581 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Distribution;
 		};
 		3A1927101420697800DA5B72 /* Build configuration list for PBXNativeTarget "ipv4 calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A1927111420697800DA5B72 /* Debug */,
 				3A1927121420697800DA5B72 /* Release */,
+				E95766D4143646B7009F8581 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Distribution;
 		};
 		3A1927131420697800DA5B72 /* Build configuration list for PBXNativeTarget "ipv4 calculatorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A1927141420697800DA5B72 /* Debug */,
 				3A1927151420697800DA5B72 /* Release */,
+				E95766D5143646B7009F8581 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Distribution;
 		};
 /* End XCConfigurationList section */
 	};
